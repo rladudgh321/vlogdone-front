@@ -1,9 +1,9 @@
-import MainComponent from '../../../public/Main';
+import AboutText from '../components/AboutText';
 
 export default function AboutPage() {
   return (
     <div>
-      <MainComponent />
+      <AboutText />
     </div>
   );
 }

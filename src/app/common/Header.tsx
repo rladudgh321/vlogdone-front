@@ -40,7 +40,11 @@ function Header() {
 
   // 사용자 데이터 로딩 실패 시
   if (isErrorUser) {
-    return <div>An error has occurred: {isErrorUser.message}</div>;
+    if (process.env.NODE_ENV === 'production') {
+      return <div>F5번을 눌러 새로고침을 해주세요</div>;
+    } else {
+      return <div>An error has occurred: {isErrorUser.message}</div>;
+    }
   }
 
   return (

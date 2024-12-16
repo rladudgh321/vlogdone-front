@@ -9,15 +9,7 @@ import { memo, useCallback, useState } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 dayjs.locale('ko');
 
-function RelateComponent({
-  params,
-  post,
-  categories,
-}: {
-  params: string;
-  post: any;
-  categories: { id: string; name: string }[];
-}) {
+function RelateComponent({ params }: { params: string }) {
   const queryClient = useQueryClient();
   const [listPage, setListPage] = useState<number>(1);
   const page = listPage || 1;
@@ -75,10 +67,7 @@ function RelateComponent({
         const date = dayjs(v.createdAt);
         return (
           <div key={v.id}>
-            <div className="flex gap-x-4 items-center p-4">
-              <Link href={`/posts/${v.id}`}>
-                <img src={v.image} alt={v.image} className="w-24 h-24" />
-              </Link>
+            <div className="flex gap-x-4 items-center p-4 justify-between">
               <Link href={`/posts/${v.id}`}>
                 <div>{v.title}</div>
               </Link>

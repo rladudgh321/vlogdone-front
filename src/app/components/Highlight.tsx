@@ -99,7 +99,9 @@ function HilightComponent({
                 <Link href={`/posts/${v.id}`}>
                   <div
                     className="relative bg-center bg-cover rounded-3xl"
-                    style={{ backgroundImage: `url('${v.image}')` }}
+                    style={{
+                      backgroundImage: `url('${v.image}')`,
+                    }}
                   >
                     <div className="hover-info hover:bg-slate-900/60 text-white w-full h-[475px] rounded-3xl">
                       <div className="absolute right-0 p-5 opacity-0">
