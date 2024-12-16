@@ -60,5 +60,5 @@
     "tailwindcss-spinner": "^1.2.0",
     "typescript": "5.1.6"
   },
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.5.3"
 }

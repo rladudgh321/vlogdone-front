@@ -77,11 +77,7 @@ export default function HelloPage({ params }: { params: { hello: string } }) {
                 name={v.author.name}
               />
               <ContentComponent content={v.content} />
-              <RealteComponent
-                post={data}
-                params={params.hello}
-                categories={v.categories}
-              />
+              <RealteComponent params={params.hello} />
               <CommentComponent
                 token={token}
                 dataUser={dataUser}
