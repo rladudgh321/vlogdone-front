@@ -11,7 +11,6 @@ export async function signupAPI(data: {
   name: string;
   gender: string;
 }) {
-  console.log('signupAPI data', data);
   const response = await axios.post('/auth/signup', data);
   return response.data;
 }

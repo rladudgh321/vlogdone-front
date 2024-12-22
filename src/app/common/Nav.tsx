@@ -100,7 +100,7 @@ function Nav({
               setTitle('전체 보기');
             }}
           >
-            전체 보기 ({dataNavCount.total})
+            전체 보기 ({dataNavCount ? dataNavCount.total : 0})
           </div>
         </Link>
 
